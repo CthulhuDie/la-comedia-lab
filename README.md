@@ -1,2 +1,9 @@
-# la-comedia-lab
-🌐 Landing page y pasarela de inscripción nativa para La Comedia Lab. Desarrollada con HTML5, CSS3 y JavaScript vanilla. Integra la API de PyDolarVenezuela para el cálculo reactivo de tarifas en Pago Móvil (tasa BCV/Paralelo) y pasarelas digitales (Binance, PayPal, Zinli).
+# 🎭 La Comedia Lab - Sitio Web Oficial
+
+¡El oficio de hacer reír se aprende sin intermediarios! Este repositorio contiene el código fuente de la plataforma web de **La Comedia Lab**.
+
+## 🛠️ Características Técnicas
+- **Diseño Adaptable (Responsive):** Optimizado para celulares y laptops.
+- **Pasarela de Pago Inteligente:** Automatización de tasas de cambio en tiempo real (BCV y Paralelo) consumiendo una API pública para cálculos exactos en Pago Móvil.
+- **Soporte Multimoneda:** Instrucciones integradas y dinámicas para pagos mediante Binance Pay, PayPal, Zinli y Pago Móvil.
+- **Código Limpio:** Desarrollado con JavaScript nativo sin dependencias pesadas.
