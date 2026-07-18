@@ -23,7 +23,9 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* ==========================================================================
+   Header & Navegación
+   ========================================================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -60,9 +62,18 @@ nav a:hover {
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
-/* Barra de Tasas de Cambio */
+.btn-github:hover {
+    background: #3f4656;
+}
+
+/* ==========================================================================
+   Barra de Tasas de Cambio (BCV / Paralelo)
+   ========================================================================== */
 .tasas-bar {
     display: flex;
     justify-content: center;
@@ -112,7 +123,9 @@ nav a:hover {
     margin-right: 5px;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
 .hero {
     height: 80vh;
     display: flex;
@@ -139,7 +152,9 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* Clases Comunes */
+/* ==========================================================================
+   Clases Comunes y Layouts (Grids)
+   ========================================================================== */
 .section {
     padding: 80px 8%;
 }
@@ -257,7 +272,25 @@ nav a:hover {
     font-size: 0.75rem;
 }
 
-/* Botones */
+/* Sobre Mí */
+.sobre-mi {
+    background: linear-gradient(rgba(26, 26, 30, 0.9), rgba(26, 26, 30, 0.9)), url('https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&w=1200&q=80') center center/cover;
+    text-align: center;
+}
+
+.sobre-mi-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-mi-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Componentes de Botones
+   ========================================================================== */
 .btn-primary, .btn-buy, .btn-gold {
     display: block;
     width: 100%;
@@ -280,25 +313,11 @@ nav a:hover {
 .btn-gold { background-color: var(--gold); color: black; }
 .btn-gold:hover { background: #e09000; }
 
-/* Sobre Mí */
-.sobre-mi {
-    background: linear-gradient(rgba(26, 26, 30, 0.9), rgba(26, 26, 30, 0.9)), url('https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&w=1200&q=80') center center/cover;
-    text-align: center;
-}
-
-.sobre-mi-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.sobre-mi-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-/* Modales */
+/* ==========================================================================
+   Sistema de Modales y Checkout de Pago
+   ========================================================================== */
 .modal {
-    display: none;
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -327,6 +346,7 @@ nav a:hover {
     font-size: 1.8rem;
     cursor: pointer;
     color: var(--text-muted);
+    transition: color 0.2s;
 }
 
 .close-btn:hover {
@@ -337,6 +357,7 @@ nav a:hover {
     font-size: 1.2rem;
     margin: 10px 0;
     color: var(--accent);
+    font-weight: bold;
 }
 
 .modal-price {
@@ -362,12 +383,18 @@ nav a:hover {
     justify-content: center;
     gap: 10px;
     color: white;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-pay-method:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 .btn-pay-method.binance { background-color: #F3BA2F; color: black; }
 .btn-pay-method.paypal { background-color: #003087; }
 .btn-pay-method.pagomovil { background-color: #009432; }
-.btn-pay-method.zinli { background-color: #4a148c; }
+.btn-pay-method.zinli { background-color: #23b5b5; } /* Color Zinli oficial ajustado */
 
 .payment-instructions {
     background-color: var(--bg-primary);
@@ -384,7 +411,9 @@ nav a:hover {
     cursor: pointer;
     display: inline-block;
     margin-top: 5px;
+    font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
 }
 
 .copiar-texto:hover {
@@ -397,7 +426,9 @@ nav a:hover {
     margin-top: 12px;
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
     text-align: center;
     padding: 40px;
@@ -414,7 +445,9 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsividad */
+/* ==========================================================================
+   Responsividad Móvil (Media Queries)
+   ========================================================================== */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -425,12 +458,20 @@ footer {
         margin: 0 10px;
     }
     .tasas-bar {
-        top: 110px;
+        top: 110px; /* Evita que choque con el menú expandido en móviles */
         gap: 10px;
         flex-wrap: wrap;
+        padding: 10px;
     }
     .hero {
+        margin-top: 175px !important; /* Ajusta el espacio del hero en móvil */
+    }
+    .hero h1 {
         font-size: 2.2rem;
-        margin-top: 165px !important;
+    }
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 20px;
     }
 }
