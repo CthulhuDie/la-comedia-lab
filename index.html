@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Comedia Lab | Aprende Comedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos limpios -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="logo">🎭 La Comedia Lab</div>
+        <nav>
+            <a href="#curso">El Curso</a>
+            <a href="#asesorias">Asesorías (Open Mic)</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#github" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+        </nav>
+    </header>
+
+    <!-- Barra de Tasas Automática -->
+<div class="tasas-bar">
+    <div class="tasa-status">
+        <span class="status-indicator" id="status-dot" style="background-color: #ffb142;"></span>
+        <span id="status-text">Cargando tasas...</span>
+    </div>
+    <div class="tasa-item">
+        <span class="tasa-label">BCV:</span>
+        <strong id="tasa-bcv-val">...</strong>
+    </div>
+    <div class="tasa-item">
+        <span class="tasa-label">Binance / Paralelo:</span>
+        <strong id="tasa-paralelo-val">...</strong>
+    </div>
+</div>
+           
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Aprende Comedia de verdad</h1>
+        <p>Pasa de contar chistes en las cenas familiares a dominar el escenario. Clases 1 a 1 y cursos estructurados a tu propio ritmo.</p>
+        <div class="hero-buttons" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="#curso" class="btn-primary">Ver Módulos</a>
+            <!-- Botón directo en el Hero para captar leads rápido -->
+            <a href="https://forms.gle/Lvx7B5iS45qbC1mQ6" target="_blank" class="btn-secondary" style="background-color: #ff4757; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">🎭 Diagnóstico Gratis</a>
+        </div>
+    </section>
+
+    <!-- Sección del Curso (Por Niveles) -->
+    <section id="curso" class="section">
+        <h2 class="section-title">El Curso: Ruta de Aprendizaje</h2>
+        <p class="section-subtitle">Un camino estructurado desde la hoja en blanco hasta tu primer show especial.</p>
+        
+        <div class="grid-modulos">
+            <!-- Básico -->
+            <div class="card modulo">
+                <span class="badge basico">Nivel Básico</span>
+                <h3>Módulo 1: La Chispa</h3>
+                <p class="precio">$29.99</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Anatomía de un chiste (Premisa + Remate)</li>
+                    <li><i class="fas fa-check"></i> Vencer el miedo escénico</li>
+                    <li><i class="fas fa-check"></i> El "Setup" perfecto</li>
+                </ul>
+                <button class="btn-buy" onclick="openPaymentModal('Curso: Módulo 1', 29.99)">Comprar Módulo</button>
+            </div>
+
+            <!-- Intermedio -->
+            <div class="card modulo">
+                <span class="badge intermedio">Nivel Intermedio</span>
+                <h3>Módulo 2: El Act-Out</h3>
+                <p class="precio">$49.99</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Expresión corporal y timing</li>
+                    <li><i class="fas fa-check"></i> Manejo del micrófono y escenario</li>
+                    <li><i class="fas fa-check"></i> La regla de tres y callbacks</li>
+                </ul>
+                <button class="btn-buy" onclick="openPaymentModal('Curso: Módulo 2', 49.99)">Comprar Módulo</button>
+            </div>
+
+            <!-- Avanzado -->
+            <div class="card modulo">
+                <span class="badge avanzado">Nivel Avanzado</span>
+                <h3>Módulo 3: El Especial</h3>
+                <p class="precio">$79.99</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Escritura de un set de 20 minutos</li>
+                    <li><i class="fas fa-check"></i> Crowdwork (interacción con el público)</li>
+                    <li><i class="fas fa-check"></i> Estilo y voz cómica propia</li>
+                </ul>
+                <button class="btn-buy" onclick="openPaymentModal('Curso: Módulo 3', 79.99)">Comprar Módulo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Asesorías / Preparación Open Mic (Escalable) -->
+    <section id="asesorias" class="section bg-dark">
+        <h2 class="section-title">Asesorías 1 a 1: Pulido de Rutinas</h2>
+        <p class="section-subtitle">Sesiones privadas conmigo vía Zoom para destruir las debilidades de tu set según tu tiempo de show.</p>
+
+        <!-- TARJETA DESTACADA: Tu Asesoría de Valoración de 20 Minutos Gratis -->
+        <div class="asesoria-gratis-container" style="max-width: 600px; margin: 0 auto 40px auto; text-align: center;">
+            <div class="card asesoria" style="border: 2px dashed #ff4757; background-color: rgba(255, 71, 87, 0.05); padding: 30px;">
+                <span class="badge-gold" style="background-color: #ff4757; color: white;">¡Prueba Gratis!</span>
+                <h3 style="margin-top: 10px;">Auditoría de Rutina Express</h3>
+                <p class="desc">¿Te quedas frío en el escenario? Evaluemos tu chiste o bache actual cara a cara en 20 minutos por Zoom antes de que inviertas un centavo.</p>
+                <p class="precio" style="color: #2ed573;">$0.00 <span style="color: #aaa;">/ 20 min</span></p>
+                <a href="https://forms.gle/Lvx7B5iS45qbC1mQ6" target="_blank" class="btn-primary" style="display: inline-block; background-color: #ff4757; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px;">
+                    🎯 Postularme a la sesión gratis
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-asesorias">
+            <!-- 5 Minutos -->
+            <div class="card asesoria">
+                <h3>Set de 5 Minutos</h3>
+                <p class="desc">Ideal para tus primeros Open Mics o audiciones rápidas.</p>
+                <p class="precio">$15.00 <span>/ sesión</span></p>
+                <button class="btn-primary" onclick="openPaymentModal('Asesoría: Set 5 Min', 15.00)">Reservar</button>
+            </div>
+
+            <!-- 10 Minutos -->
+            <div class="card asesoria">
+                <h3>Set de 10 Minutos</h3>
+                <p class="desc">Asegura un set sólido, dinámico y con transiciones limpias.</p>
+                <p class="precio">$25.00 <span>/ sesión</span></p>
+                <button class="btn-primary" onclick="openPaymentModal('Asesoría: Set 10 Min', 25.00)">Reservar</button>
+            </div>
+
+            <!-- 20 Minutos -->
+            <div class="card asesoria">
+                <h3>Set de 20 Minutos</h3>
+                <p class="desc">La duración estándar para ser el host o comediante de soporte.</p>
+                <p class="precio">$45.00 <span>/ sesión</span></p>
+                <button class="btn-primary" onclick="openPaymentModal('Asesoría: Set 20 Min', 45.00)">Reservar</button>
+            </div>
+
+            <!-- 1 Hora -->
+            <div class="card asesoria master">
+                <span class="badge-gold">Recomendado</span>
+                <h3>Especial de 1 Hora</h3>
+                <p class="desc">Revisión de estructura larga, narrativa del show y ritmo cómico total.</p>
+                <p class="precio">$120.00 <span>/ sesión</span></p>
+                <button class="btn-gold" onclick="openPaymentModal('Asesoría: Especial 1 Hora', 120.00)">Reservar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="section sobre-mi">
+        <div class="sobre-mi-content">
+            <h2>El Oficio se Aprende de Otro Comediante: Sin Intermediarios</h2>
+            <p>Hola, soy el encargado de picar la piedra contigo en <strong>La Comedia Lab</strong>. Aquí no vas a encontrar teorías corporativas ni videos genéricos pregrabados que se quedan fríos. Esto es mentoría directa, de comediante a comediante.</p>
+            <p>Nos sentamos tú y yo a destripar tu rutina línea por línea. Analizamos el ritmo, ajustamos los remates y pulimos la actitud para que cuando te subas a ese Open Mic, el público se ría de tus chistes y no de tus nervios. El trato es directo conmigo desde el primer día.</p>
+        </div>
+    </section>
+           
+        </div>
+    </section>
+
+    <!-- Modal de Pago Único y Dinámico -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePaymentModal()">&times;</span>
+            <h3>Confirmar tu Pedido</h3>
+            <p id="modal-item-name" class="modal-item"></p>
+            <p class="modal-price">Total a pagar: <strong id="modal-item-price"></strong></p>
+
+            <h4>Selecciona tu método de pago:</h4>
+            <div class="payment-methods">
+                <button class="btn-pay-method binance" onclick="processPayment('Binance')">
+                    <i class="fa-solid fa-coins"></i> Binance Pay
+                </button>
+                <button class="btn-pay-method paypal" onclick="processPayment('PayPal')">
+                    <i class="fab fa-paypal"></i> PayPal
+                </button>
+                <button class="btn-pay-method pagomovil" onclick="processPayment('Pago Móvil')">
+                    <i class="fa-solid fa-mobile-screen"></i> Pago Móvil
+                </button>
+                <button class="btn-pay-method zinli" onclick="processPayment('Zinli')">
+                    <i class="fa-solid fa-credit-card"></i> Zinli
+                </button>
+            </div>
+            
+            <!-- Formulario de instrucción dinámica de pago -->
+            <div id="payment-instructions" class="payment-instructions" style="display:none;">
+                <!-- Se llena dinámicamente con JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección GitHub footer -->
+    <footer id="github">
+        <p>© 2026 La Comedia Lab - Creado por un solo comediante para futuros profesionales.</p>
+        <p>Código abierto disponible en: <a href="https://github.com/CthulhuDie/la-comedia-lab" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub Repository</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
